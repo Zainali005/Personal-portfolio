@@ -69,8 +69,7 @@ const Project = ({ projects }) => {
           </div>
         );
       })}
-      <p className="text-center">There are some other projects that can't be shown due to company/client policies.</p>
-    </>
+      </>
     
   );
 };

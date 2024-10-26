@@ -2,55 +2,63 @@ import React, { useCallback, useEffect, useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  // show menu on medium and small devices
   const [showmenu, setShowmenu] = useState(false);
 
-  // change active section background header
   const scrollActive = useCallback(() => {
-    let section = [];
-    if (!section.length) {
-      section = document.querySelectorAll("section[id]");
-    }
+    const sections = document.querySelectorAll("section[id]");
 
     const scrollY = window.pageYOffset + window.innerHeight / 3;
 
-    section.forEach((current) => {
+    sections.forEach((current) => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 50;
       const sectionId = current.getAttribute("id");
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-          .querySelector(".nav_menu a[href*=" + sectionId + "]")
-          .classList.add("active_link");
-      } else {
-        document
-          .querySelector(".nav_menu a[href*=" + sectionId + "]")
-          .classList.remove("active_link");
+      const linkElement = document.querySelector(
+        `.nav_menu a[href*="${sectionId}"]`
+      );
+
+      if (linkElement) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          linkElement.classList.add("active_link");
+        } else {
+          linkElement.classList.remove("active_link");
+        }
       }
     });
   }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", scrollActive);
+
+    // Adding box shadow to the header on scroll
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (header) {
+        if (window.scrollY >= 30) {
+          header.classList.add("scroll_header");
+        } else {
+          header.classList.remove("scroll_header");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener("scroll", scrollActive);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [scrollActive]);
 
-  //Adding box Shadow
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    if (this.scrollY >= 30) header.classList.add("scroll_header");
-    else header.classList.remove("scroll_header");
-  });
-
-  const menuHandler = () => {
-    setShowmenu(false);
-  };
+  const menuHandler = () => setShowmenu(false);
 
   return (
     <header className="header">
       <nav className="nav container">
         <div className="nav_logo" data-aos="fade-right">
-              Zain Ali
+          Zain Ali
         </div>
         <div
           className={showmenu ? "nav_menu show_menu" : "nav_menu"}
@@ -58,11 +66,7 @@ const Navbar = () => {
         >
           <ul className="nav_list">
             <li className="nav_item">
-              <a
-                href="#home"
-                className="nav_link active_link"
-                onClick={menuHandler}
-              >
+              <a href="#home" className="nav_link" onClick={menuHandler}>
                 <i className="uil uil-estate nav_icon"></i> Home
               </a>
             </li>
@@ -92,10 +96,8 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-
-          <i className="uil uil-times nav_close" onClick={() => setShowmenu(false)}></i>
+          <i className="uil uil-times nav_close" onClick={menuHandler}></i>
         </div>
-
         <div className="nav_toggle" onClick={() => setShowmenu(true)}>
           <i className="uil uil-apps"></i>
         </div>

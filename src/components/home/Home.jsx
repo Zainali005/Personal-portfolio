@@ -30,7 +30,7 @@ const Home = () => {
         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
                 />
                 <image
-                  className="home_profile_image"
+                  className="home_profile_image circular_image"
                   x="10"
                   y="0"
                   xlinkHref={profileImage}
@@ -61,11 +61,7 @@ const Home = () => {
             <h3 className="home_subtitle">
               <Typewriter
                 options={{
-                  strings: [
-                    "Web Developer",
-                    "Front-End Developer",
-                    "React JS"
-                  ],
+                  strings: ["Web Developer", "Mern stack Developer", "Next JS"],
                   autoStart: true,
                   loop: true,
                   pauseFor: 1000,
@@ -73,9 +69,17 @@ const Home = () => {
               />
             </h3>
             <p className="home_description" data-aos="zoom-in">
-            I am a <b>Frontend Web Developer</b> with a passion for crafting engaging user experiences. With 1+ years of experience, I specialize in building responsive and interactive web applications using modern frontend technologies such as React, Vue.js, and Angular. I have a strong foundation in HTML, CSS, and JavaScript, and I constantly stay updated with the latest trends and best practices in web development. I thrive on turning designs into pixel-perfect, functional interfaces and am dedicated to creating intuitive and accessible experiences for users. Let's work together to bring your ideas to life on the web!
-  
+              I am a <b>MERN Stack Web Developer</b> with a passion for crafting
+              engaging user experiences. With over 1 year of experience, I
+              specialize in building responsive and interactive web applications
+              using the MERN stack: MongoDB, Express.js, React, and Node.js. My
+              expertise covers both frontend and backend development, enabling
+              me to create seamless and efficient full-stack applications. I am
+              dedicated to transforming ideas into reliable, scalable, and
+              visually appealing web solutions. Let's work together to bring
+              your concepts to life with modern, cutting-edge technologies!
             </p>
+
             <a
               href="https://github.com/Zainali005"
               rel="noreferrer"

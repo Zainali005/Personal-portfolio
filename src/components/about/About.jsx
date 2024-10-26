@@ -49,14 +49,26 @@ const About = () => {
           </div>
 
           <p className="about_description" data-aos="zoom-in">
-      I am Zain Ali, a frontend web developer specializing in creating engaging user interfaces and experiences. With a passion for clean and efficient code, I excel in crafting intuitive and visually appealing websites using the latest frontend technologies like React js.
-      <br />
-      My experience includes working extensively with HTML, CSS, and JavaScript to build responsive and interactive web applications. I am proficient in translating design mockups into pixel-perfect web layouts and have a keen eye for detail.
-      <br />
-      I thrive in collaborative environments and enjoy working as part of a team to bring projects to life. I am committed to staying updated with industry trends and best practices to deliver cutting-edge solutions that meet the needs of modern web development.
-      <br />
-      Let's collaborate and leverage my skills and experience to elevate your next frontend project to new heights.
-    </p>
+            I am Zain Ali, a MERN Stack developer specializing in creating
+            robust, full-stack web applications. With a passion for clean and
+            efficient code, I excel in building intuitive, scalable, and
+            visually appealing applications using MongoDB, Express.js, React,
+            and Node.js.
+            <br />
+            My experience includes working extensively with both frontend and
+            backend technologies to deliver responsive and interactive web
+            applications. I am proficient in translating design mockups into
+            pixel-perfect web layouts and have a strong foundation in API
+            development and database management.
+            <br />
+            I thrive in collaborative environments and enjoy working as part of
+            a team to bring projects to life. I am committed to staying updated
+            with industry trends and best practices to deliver cutting-edge
+            solutions that meet the demands of modern web development.
+            <br />
+            Let's collaborate and leverage my skills and experience to elevate
+            your next MERN stack project to new heights.
+          </p>
 
           <a
             href={CV}
