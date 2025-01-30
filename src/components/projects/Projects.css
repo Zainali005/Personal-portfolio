@@ -28,6 +28,8 @@
   gap: 3rem;
   align-items: center;
   margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .project_item {
@@ -35,6 +37,7 @@
   overflow: hidden;
   border-radius: 10px;
   width: 100%;
+  max-width: 600px;
   line-height: 0;
 }
 
@@ -96,6 +99,7 @@
 button {
   padding: 1rem;
   width: 100%;
+  font-size: 1rem;
 }
 
 .project_link a:not(:last-child) {
@@ -111,24 +115,48 @@ button {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .projects_container {
     width: 100%;
+    padding: 0 2rem;
   }
+
   .project_heading {
-    width: 80%;
+    width: 90%;
+    font-size: var(--h3-font-size);
+  }
+
+  .project_link {
+    width: 70%;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 768px) {
+  .projects_container {
+    padding: 0 1rem;
+  }
+
   .project_heading {
-    -webkit-line-clamp: 2;
-    line-height: 1.6rem;
-    padding: 0.2rem 0;
+    width: 85%;
+    font-size: var(--h4-font-size);
   }
 
   .project_link {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project_heading {
+    width: 90%;
+    -webkit-line-clamp: 2;
+    line-height: 1.6rem;
+    padding: 0.2rem 0;
+    font-size: var(--h5-font-size);
+  }
+
+  .project_link {
+    width: 90%;
   }
 
   .project_link a,

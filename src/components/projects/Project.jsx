@@ -69,8 +69,7 @@ const Project = ({ projects }) => {
           </div>
         );
       })}
-      </>
-    
+    </>
   );
 };
 
