@@ -70,7 +70,7 @@ const Home = () => {
             </h3>
             <p className="home_description" data-aos="zoom-in">
               I am a <b>MERN Stack Web Developer</b> with a passion for crafting
-              engaging user experiences. With over 1 year of experience, I
+              engaging user experiences. With over 2 year of experience, I
               specialize in building responsive and interactive web applications
               using the MERN stack: MongoDB, Express.js, React, and Node.js. My
               expertise covers both frontend and backend development, enabling

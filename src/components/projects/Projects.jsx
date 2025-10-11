@@ -6,7 +6,10 @@ import Codeertz from "../../assets/codeetz.png";
 import NorthStar from "../../assets/northstart.png";
 import Consultore from "../../assets/consultore.png";
 import Tamara from "../../assets/tamara.png";
-
+import CoretailSolutions from "../../assets/coretail.png";
+import nova from "../../assets/nova.png";
+import loadaid from "../../assets/loadaid.png";
+import syncortic from "../../assets/syncortic.png";
 import "./Projects.css";
 
 const Projects = () => {
@@ -92,6 +95,54 @@ const Projects = () => {
                 <li>🔹 <strong>Live Order Tracking</strong> – Clients can track their order progress in real time.</li>
                 <li>🔹 <strong>Payment Integration</strong> – Supports multiple payment gateways.</li>
                 <li>🔹 <strong>Multi-User Dashboard</strong> – Separate portals for customers and writers.</li>
+              </ul>`,
+            },
+            {
+              imageURL: CoretailSolutions,
+              title: "Coretail Solutions",
+              demo: "https://coretailsolutions.com/",
+              description: `<p><strong>Coretail Solutions</strong> is a modern <strong>digital marketing and web development agency</strong> that helps brands grow through innovative strategies and creative solutions.</p>
+              <ul>
+                <li>🔹 <strong>Agency Portfolio</strong> – Showcases a wide range of marketing, branding, and web development services.</li>
+                <li>🔹 <strong>Dynamic Service Pages</strong> – Built with reusable components for easy content updates.</li>
+                <li>🔹 <strong>Responsive UI</strong> – Fully optimized for desktop, tablet, and mobile devices.</li>
+                <li>🔹 <strong>SEO-Friendly Design</strong> – Ensures faster performance and higher search visibility.</li>
+              </ul>`,
+            },
+            {
+              imageURL: syncortic,
+              title: "Syncortic",
+              demo: "https://syncortic.com/",
+              description: `<p><strong>Syncortic</strong> is a <strong>property management agency website</strong> offering seamless solutions for real estate and rental management.</p>
+              <ul>
+                <li>🔹 <strong>Modern Agency Design</strong> – Built with a clean and minimal interface to reflect professionalism.</li>
+                <li>🔹 <strong>Service Integration</strong> – Highlights property management, accounting, and maintenance services.</li>
+                <li>🔹 <strong>Client-Centric Layout</strong> – Designed for easy navigation and lead generation.</li>
+                <li>🔹 <strong>Responsive & Scalable</strong> – Optimized for both performance and adaptability.</li>
+              </ul>`,
+            },
+            {
+              imageURL: loadaid,
+              title: "LoadAid",
+              demo: "https://www.loadaid.us/",
+              description: `<p><strong>LoadAid</strong> is a <strong>truck dispatching and logistics service platform</strong> designed to simplify fleet management and dispatch operations.</p>
+              <ul>
+                <li>🔹 <strong>Service-Based Website</strong> – Showcases dispatching, freight management, and carrier support.</li>
+                <li>🔹 <strong>Lead Generation Forms</strong> – Enables users to request quotes and connect with dispatchers easily.</li>
+                <li>🔹 <strong>Modern User Interface</strong> – Clean, responsive layout tailored for logistics businesses.</li>
+                <li>🔹 <strong>Optimized Performance</strong> – Fast-loading pages with SEO-friendly structure.</li>
+              </ul>`,
+            },
+            {
+              imageURL: nova,
+              title: "Nova Jewelers",
+              demo: "https://www.novajeweller.com/",
+              description: `<p><strong>Nova Jewelers</strong> is a luxury <strong>e-commerce website</strong> for fine jewelry, offering a premium online shopping experience.</p>
+              <ul>
+                <li>🔹 <strong>Product Catalog Integration</strong> – Showcases a wide range of jewelry collections with high-quality images.</li>
+                <li>🔹 <strong>Cart & Checkout</strong> – Smooth shopping experience with add-to-cart and checkout functionality.</li>
+                <li>🔹 <strong>Mobile-Friendly Design</strong> – Responsive layout optimized for all devices.</li>
+                <li>🔹 <strong>Elegant UI/UX</strong> – Minimalistic and luxurious interface aligning with brand identity.</li>
               </ul>`,
             },
           ]}
