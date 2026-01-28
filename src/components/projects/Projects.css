@@ -1,7 +1,13 @@
 .scroller {
-  grid-template-rows: repeat(1, 230px);
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.project_row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
 }
 .scroller .description {
   height: 100%;
@@ -32,10 +38,16 @@
   padding: 0 1rem;
 }
 
+.projects_all_button {
+  margin-top: 1rem;
+  padding-inline: 2.5rem;
+}
+
 .project_item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
   width: 100%;
   max-width: 600px;
   line-height: 0;
@@ -116,6 +128,10 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  .project_row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .projects_container {
     width: 100%;
     padding: 0 2rem;
@@ -132,6 +148,10 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .project_row {
+    gap: 2rem;
+  }
+
   .projects_container {
     padding: 0 1rem;
   }
@@ -147,6 +167,10 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+  .project_row {
+    gap: 1.5rem;
+  }
+
   .project_heading {
     width: 90%;
     -webkit-line-clamp: 2;

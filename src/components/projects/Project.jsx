@@ -3,7 +3,7 @@ const Project = ({ projects }) => {
     <>
       {projects.map((data, i) => {
         return (
-          <div className="projects_container container grid scroller">
+          <div className="container grid scroller project_row" key={i}>
             {i % 2 !== 0 && (
               <div className="description d-none">
                 <h3>About {data.title}</h3>
@@ -19,7 +19,6 @@ const Project = ({ projects }) => {
             )}
             <div
               className="project_item"
-              key={i}
               data-aos={i % 2 !== 0 ? "fade-left" : "fade-right"}
             >
               <img

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Project from "./Project";
 import StickerBlitz from "../../assets/stickerblitz.png";
 import SehalWelfare from "../../assets/sehalwelfare.png";
@@ -13,18 +13,7 @@ import syncortic from "../../assets/syncortic.png";
 import "./Projects.css";
 
 const Projects = () => {
-  return (
-    <section className="projects section" id="projects">
-      <h2 className="section_title" data-aos="zoom-in">
-        Projects
-      </h2>
-      <span className="section_subtitle" data-aos="zoom-in">
-        Most recent work
-      </span>
-
-      <div className="projects_container container">
-        <Project
-          projects={[
+  const projectsList = [
             {
               imageURL: StickerBlitz,
               title: "Sticker Blitz",
@@ -145,8 +134,56 @@ const Projects = () => {
                 <li>🔹 <strong>Elegant UI/UX</strong> – Minimalistic and luxurious interface aligning with brand identity.</li>
               </ul>`,
             },
-          ]}
-        />
+            {
+              imageURL: StickerBlitz,
+              title: "CryptoWhat",
+              demo: "https://cryptowhat.com/",
+              description: `<p><strong>CryptoWhat</strong> is an interactive <strong>crypto learning platform</strong> built with <strong>Next.js</strong>, <strong>Firebase</strong>, and <strong>OpenAI</strong> that helps users understand Web3 and digital assets.</p>
+              <ul>
+                <li>🔹 <strong>Dual Dashboards</strong> – Separate <strong>Admin</strong> and <strong>Learner</strong> dashboards for managing content and tracking progress.</li>
+                <li>🔹 <strong>AI‑Powered Learning</strong> – Uses OpenAI to generate personalized explanations and quizzes.</li>
+                <li>🔹 <strong>Progress Tracking</strong> – Stores user progress, achievements, and course completion using Firebase.</li>
+                <li>🔹 <strong>Responsive Next.js Frontend</strong> – Fast, SEO‑friendly UI optimized for all devices.</li>
+              </ul>`,
+            },
+            {
+              imageURL: Consultore,
+              title: "Farenio",
+              demo: "https://farenio.com/",
+              description: `<p><strong>Farenio</strong> is a modern <strong>on‑demand cleaning services platform</strong> with a multi‑portal architecture built using <strong>Next.js</strong>, <strong>Laravel</strong>, and <strong>MySQL</strong>.</p>
+              <ul>
+                <li>🔹 <strong>Three Dedicated Portals</strong> – Individual dashboards for <strong>Admin</strong>, <strong>Cleaner</strong>, and <strong>Client</strong>.</li>
+                <li>🔹 <strong>Booking & Scheduling</strong> – Clients can schedule, reschedule, and manage cleaning appointments easily.</li>
+                <li>🔹 <strong>Role‑Based Access</strong> – Laravel backend with MySQL handles authentication and permissions for each portal.</li>
+                <li>🔹 <strong>Service Management</strong> – Admin can manage services, pricing, availability, and cleaner assignments.</li>
+              </ul>`,
+            },
+          ];
+
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectsList : projectsList.slice(0, 3);
+
+  return (
+    <section className="projects section" id="projects">
+      <h2 className="section_title" data-aos="zoom-in">
+        Projects
+      </h2>
+      <span className="section_subtitle" data-aos="zoom-in">
+        Most recent work
+      </span>
+
+      <div className="projects_container container">
+        <Project projects={visibleProjects} />
+
+        {!showAll && projectsList.length > 3 && (
+          <button
+            type="button"
+            className="button button_flex projects_all_button"
+            onClick={() => setShowAll(true)}
+          >
+            View All Projects
+          </button>
+        )}
       </div>
     </section>
   );
