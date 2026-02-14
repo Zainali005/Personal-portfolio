@@ -3,37 +3,33 @@ import SkillBox from "./SkillBox";
 import "./Skills.css";
 
 const Skills = () => {
-  const frontendSkills = [
-    { skill_name: "HTML", skill_level: "Advanced" },
-    { skill_name: "React JS", skill_level: "Intermediate" },
-    { skill_name: "JavaScript", skill_level: "Intermediate" },
-    { skill_name: "NEXT JS", skill_level: "Intermediate" },
-    { skill_name: "Tailwind Css", skill_level: "Intermediate" },
-    { skill_name: "Bootstrap", skill_level: "Intermediate" },
-    { skill_name: "Sass/Scss", skill_level: "Intermediate" },
-  ];
-  const backendSkills = [
-    {
-      skill_name: "Node Js",
-      skill_level: "Basic",
-    },
-    {
-      skill_name: "Express Js",
-      skill_level: "Intermediate",
-    },
-    {
-      skill_name: "Python Flask",
-      skill_level: "Intermediate",
-    },
-    {
-      skill_name: "RestApi",
-      skill_level: "Intermediate",
-    },
-    {
-      skill_name: "Graphql",
-      skill_level: "Basic",
-    },
-  ];
+ const frontendSkills = [
+  { skill_name: "HTML", skill_level: "Advanced" },
+  { skill_name: "CSS", skill_level: "Advanced" },
+  { skill_name: "JavaScript", skill_level: "Advanced" },
+  { skill_name: "React JS", skill_level: "Advanced" },
+  { skill_name: "Next.js", skill_level: "Advanced" },
+  { skill_name: "Tailwind CSS", skill_level: "Advanced" },
+  { skill_name: "Bootstrap", skill_level: "Advanced" },
+  { skill_name: "Sass / SCSS", skill_level: "Advanced" },
+  { skill_name: "Responsive Design", skill_level: "Advanced" },
+  { skill_name: "Cross-Browser Compatibility", skill_level: "Advanced" },
+  { skill_name: "UI / UX Implementation", skill_level: "Advanced" },
+  { skill_name: "REST API Integration", skill_level: "Advanced" },
+];
+const backendSkills = [
+  { skill_name: "Node.js", skill_level: "Advanced" },
+  { skill_name: "Express.js", skill_level: "Advanced" },
+  { skill_name: "REST API Development", skill_level: "Advanced" },
+  { skill_name: "MongoDB", skill_level: "Advanced" },
+  { skill_name: "JWT Authentication", skill_level: "Advanced" },
+  { skill_name: "API Integration", skill_level: "Advanced" },
+  { skill_name: "Python (Flask)", skill_level: "Intermediate" },
+  { skill_name: "GraphQL", skill_level: "Intermediate" },
+  { skill_name: "Database Design", skill_level: "Advanced" },
+  { skill_name: "Error Handling", skill_level: "Advanced" },
+];
+
   return (
     <section className="skills section" id="skills">
       <h2 className="section_title" data-aos="zoom-in">

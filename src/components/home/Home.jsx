@@ -30,7 +30,7 @@ const Home = () => {
               <image
                 className="home_profile_image circular_image"
                 x="0"
-                y="15"
+                y="-25"
                 width="200"
                 height="240"
                 xlinkHref={profileImage}
@@ -61,7 +61,7 @@ const Home = () => {
             <h3 className="home_subtitle">
               <Typewriter
                 options={{
-                  strings: ["Web Developer", "Mern stack Developer", "Next JS"],
+                  strings: ["Backend Developer", "Full stack Developer", "Next JS", "Frontend Developer"],
                   autoStart: true,
                   loop: true,
                   pauseFor: 1000,
@@ -69,15 +69,14 @@ const Home = () => {
               />
             </h3>
             <p className="home_description" data-aos="zoom-in">
-              I am a <b>MERN Stack Web Developer</b> with a passion for crafting
-              engaging user experiences. With over 2 year of experience, I
-              specialize in building responsive and interactive web applications
-              using the MERN stack: MongoDB, Express.js, React, and Node.js. My
-              expertise covers both frontend and backend development, enabling
-              me to create seamless and efficient full-stack applications. I am
-              dedicated to transforming ideas into reliable, scalable, and
-              visually appealing web solutions. Let's work together to bring
-              your concepts to life with modern, cutting-edge technologies!
+              I am a <b>Full Stack Developer</b> with a passion for crafting engaging and
+              user-centric digital experiences. With over 2 years of experience, I
+              specialize in building responsive and interactive web applications using
+              modern technologies. My expertise spans both frontend and backend
+              development, allowing me to create seamless, efficient, and scalable
+              solutions. I am dedicated to transforming ideas into reliable, visually
+              appealing, and high-performance web applications. Let’s work together to
+              bring your concepts to life using cutting-edge technologies!
             </p>
 
             <a

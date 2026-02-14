@@ -49,26 +49,25 @@ const About = () => {
           </div>
 
           <p className="about_description" data-aos="zoom-in">
-            I am Zain Ali, a MERN Stack developer specializing in creating
-            robust, full-stack web applications. With a passion for clean and
-            efficient code, I excel in building intuitive, scalable, and
-            visually appealing applications using MongoDB, Express.js, React,
-            and Node.js.
+            I am Zain Ali, a Full Stack Developer specializing in building robust and
+            scalable web applications. With a passion for clean and efficient code, I
+            focus on creating intuitive, high-performance, and visually appealing
+            digital experiences using modern technologies.
             <br />
-            My experience includes working extensively with both frontend and
-            backend technologies to deliver responsive and interactive web
-            applications. I am proficient in translating design mockups into
-            pixel-perfect web layouts and have a strong foundation in API
-            development and database management.
+            My experience includes working extensively with both frontend and backend
+            technologies to deliver responsive and interactive applications. I am
+            proficient in translating design mockups into pixel-perfect interfaces and
+            possess a strong foundation in API development and database management.
             <br />
-            I thrive in collaborative environments and enjoy working as part of
-            a team to bring projects to life. I am committed to staying updated
-            with industry trends and best practices to deliver cutting-edge
-            solutions that meet the demands of modern web development.
+            I thrive in collaborative environments and enjoy working as part of a team
+            to transform ideas into real-world solutions. I am committed to staying
+            updated with industry trends and best practices to deliver cutting-edge,
+            maintainable products.
             <br />
-            Let's collaborate and leverage my skills and experience to elevate
-            your next MERN stack project to new heights.
+            Let’s collaborate and leverage my skills and experience to bring your next
+            project to life.
           </p>
+
 
           <a
             href={CV}

@@ -40,12 +40,23 @@ const Resume = () => {
           iconClass="briefcase-alt"
           qualification={[
             {
-              title: "FRONTEND Web Developer",
-              location: "Free CodeCamp",
-              calender: "February 2024 - Present",
+              title: "Mern Stack Developer",
+              location: "Codeertz",
+              calender: "March 2024 - September 2024",
+            },
+            {
+              title: "Mern Stack Developer",
+              location: "Hexis Technologies",
+              calender: "November 2024 - February 2025",
+            },
+            {
+              title: "Junior Software Engineer",
+              location: "Coretails Solutions (US Based)",
+              calender: "April 2025 - October 2025",
             },
           ]}
         />
+
       </div>
     </section>
   );
