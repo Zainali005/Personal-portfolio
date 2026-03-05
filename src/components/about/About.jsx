@@ -6,25 +6,28 @@ import CV from "../../assets/zainali-cv-ok.pdf";
 const About = () => {
   return (
     <section className="about section" id="about">
-      <h2 className="section_title" data-aos="zoom-in">
-        About Me
-      </h2>
-      <span className="section_subtitle" data-aos="zoom-in">
-        My introduction
-      </span>
+      <div className="about_wrapper">
+        <p className="about_label">Get to know me</p>
+        <h2 className="section_title about_heading" data-aos="zoom-in">
+          About Me
+        </h2>
+        <span className="section_subtitle" data-aos="zoom-in">
+          My introduction
+        </span>
 
       <div className="about_container container">
-        <img
-          src={aboutImg}
-          alt=""
-          className="about_img"
-          data-aos="fade-right"
-        />
+        <div className="about_img_frame" data-aos="fade-right">
+          <img
+            src={aboutImg}
+            alt="Zain Ali"
+            className="about_img"
+          />
+        </div>
 
         <div className="about_data">
           <div className="about_info">
             <div className="about_box" data-aos="fade-left" data-aos-delay="0">
-              <i className="uil uil-award about_icon"></i>
+              <span className="about_box_icon"><i className="uil uil-award"></i></span>
               <h3 className="about_title">Experience</h3>
               <span className="about_subtitle">2 years</span>
             </div>
@@ -33,7 +36,7 @@ const About = () => {
               data-aos="fade-left"
               data-aos-delay="300"
             >
-              <i className="uil uil-suitcase-alt about_icon"></i>
+              <span className="about_box_icon"><i className="uil uil-suitcase-alt"></i></span>
               <h3 className="about_title">Worked On</h3>
               <span className="about_subtitle">Few projects</span>
             </div>
@@ -42,13 +45,14 @@ const About = () => {
               data-aos="fade-left"
               data-aos-delay="600"
             >
-              <i className="uil uil-graduation-cap about_icon"></i>
-              <h3 className="about_title">Qulafication</h3>
+              <span className="about_box_icon"><i className="uil uil-graduation-cap"></i></span>
+              <h3 className="about_title">Qualification</h3>
               <span className="about_subtitle">BS Graduate</span>
             </div>
           </div>
 
-          <p className="about_description" data-aos="zoom-in">
+          <div className="about_description_block" data-aos="zoom-in">
+          <p className="about_description">
             I am Zain Ali, a Full Stack Developer specializing in building robust and
             scalable web applications. With a passion for clean and efficient code, I
             focus on creating intuitive, high-performance, and visually appealing
@@ -67,7 +71,7 @@ const About = () => {
             Let’s collaborate and leverage my skills and experience to bring your next
             project to life.
           </p>
-
+          </div>
 
           <a
             href={CV}
@@ -103,6 +107,7 @@ const About = () => {
             </svg>
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

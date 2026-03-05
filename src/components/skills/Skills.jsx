@@ -32,7 +32,8 @@ const backendSkills = [
 
   return (
     <section className="skills section" id="skills">
-      <h2 className="section_title" data-aos="zoom-in">
+      <p className="skills_label">What I work with</p>
+      <h2 className="section_title skills_heading" data-aos="zoom-in">
         Skills
       </h2>
       <span className="section_subtitle" data-aos="zoom-in">

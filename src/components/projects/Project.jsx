@@ -1,73 +1,76 @@
 const Project = ({ projects }) => {
   return (
     <>
-      {projects.map((data, i) => {
-        return (
-          <div className="container grid scroller project_row" key={i}>
-            {i % 2 !== 0 && (
-              <div className="description d-none">
-                <h3>About {data.title}</h3>
-                <div
-                  className="data"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      data?.description ||
-                      `<p>No Description Found For This Project</p>`,
-                  }}
-                ></div>
-              </div>
-            )}
-            <div
-              className="project_item"
-              data-aos={i % 2 !== 0 ? "fade-left" : "fade-right"}
-            >
-              <img
-                src={data.imageURL}
-                alt="Project Data"
-                className="project_image"
-              />
-              <div className="background_blur"></div>
-              <h3 className="project_heading">{data.title}</h3>
-              <div className="project_link">
+      {projects.map((data, i) => (
+        <article
+          className="project_card"
+          key={i}
+          data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+        >
+          <div className="project_card_image_wrap">
+            <img
+              src={data.imageURL}
+              alt={data.title}
+              className="project_card_image"
+            />
+            <div className="project_card_overlay">
+              <a
+                href={data.demo}
+                rel="noreferrer"
+                target="_blank"
+                className="project_card_btn project_card_btn_primary"
+              >
+                <i className="uil uil-globe" />
+                Visit Site
+              </a>
+              {data?.github && (
                 <a
-                  href={data.demo}
+                  href={data.github}
                   rel="noreferrer"
                   target="_blank"
-                  className="button button_flex"
+                  className="project_card_btn project_card_btn_secondary"
                 >
-                  Visit Site
-                  <i className="uil uil-globe project_icon"></i>
+                  <i className="uil uil-github" />
+                  GitHub
                 </a>
-                <br />
-                {data?.github && (
-                  <a
-                    href={data.github}
-                    rel="noreferrer"
-                    target="_blank"
-                    className="button button_flex"
-                  >
-                    View On Github
-                    <i className="uil uil-github project_icon"></i>
-                  </a>
-                )}
-              </div>
+              )}
             </div>
-            {i % 2 === 0 && (
-              <div className="description d-none">
-                <h3>About {data.title}</h3>
-                <div
-                  className="data"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      data?.description ||
-                      `<p>No Description Found For This Project</p>`,
-                  }}
-                ></div>
-              </div>
-            )}
           </div>
-        );
-      })}
+          <div className="project_card_body">
+            <h3 className="project_card_title">{data.title}</h3>
+            <div
+              className="project_card_description"
+              dangerouslySetInnerHTML={{
+                __html:
+                  data?.description ||
+                  `<p>No description available for this project.</p>`,
+              }}
+            />
+            <div className="project_card_actions">
+              <a
+                href={data.demo}
+                rel="noreferrer"
+                target="_blank"
+                className="button button_flex project_card_link"
+              >
+                Visit Site
+                <i className="uil uil-arrow-right button_icon" />
+              </a>
+              {data?.github && (
+                <a
+                  href={data.github}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="button button_flex project_card_link project_card_link_outline"
+                >
+                  <i className="uil uil-github" />
+                  Code
+                </a>
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
     </>
   );
 };

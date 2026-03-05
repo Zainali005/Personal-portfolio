@@ -1,0 +1,1 @@
+import{j as l}from"./index-B5Mvk6i_.js";const r=()=>(window.addEventListener("scroll",function(){const s=document.querySelector(".scroll_up");this.scrollY>=500?s.classList.add("show_scroll"):s.classList.remove("show_scroll")}),l.jsx("a",{href:"#home",className:"scroll_up",children:l.jsx("i",{className:"uil uil-arrow-up scroll_up_icon"})}));export{r as default};

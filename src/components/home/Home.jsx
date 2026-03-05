@@ -6,10 +6,12 @@ import "./Home.css";
 const Home = () => {
   return (
     <section className="home section" id="home">
+      <div className="home_bg" aria-hidden="true" />
       <div className="home_container container">
         <div className="home_content">
           <div className="home_img" data-aos="zoom-in-left">
-            <svg
+            <div className="home_img_wrapper">
+              <svg
               className="home_profile_image_svg"
               viewBox="0 0 200 187"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,12 +35,14 @@ const Home = () => {
                 y="-25"
                 width="200"
                 height="240"
-                xlinkHref={profileImage}
+                href={profileImage}
                 clipPath="url(#profileCircle)"
               />
             </svg>
+            </div>
           </div>
           <div className="home_data">
+            <span className="home_badge" data-aos="zoom-in-right">Available for work</span>
             <h3 className="home_hand" data-aos="zoom-in-right">
               <svg
                 stroke="currentColor"
@@ -79,6 +83,7 @@ const Home = () => {
               bring your concepts to life using cutting-edge technologies!
             </p>
 
+            <div className="home_buttons" data-aos="flip-left">
             <a
               href="https://github.com/Zainali005"
               rel="noreferrer"
@@ -103,6 +108,11 @@ const Home = () => {
                 ></path>
               </svg>
             </a>
+            <a href="#contact" className="button button_flex button_outline">
+              Get in touch
+              <i className="uil uil-message button_icon" />
+            </a>
+            </div>
           </div>
         </div>
       </div>

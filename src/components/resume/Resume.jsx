@@ -5,7 +5,8 @@ import ResumeBox from "./ResumeBox";
 const Resume = () => {
   return (
     <section className="resume section" id="resume">
-      <h2 className="section_title" data-aos="zoom-in">
+      <p className="resume_label">Experience & education</p>
+      <h2 className="section_title resume_heading_title" data-aos="zoom-in">
         Resume
       </h2>
       <span className="section_subtitle" data-aos="zoom-in">

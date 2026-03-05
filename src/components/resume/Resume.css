@@ -1,79 +1,183 @@
+/* ========== Resume section – card layout & accent ========== */
+.resume {
+  background: linear-gradient(180deg, #fff 0%, var(--accent-soft) 50%, #fff 100%);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.resume_label {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.resume_heading_title {
+  margin-bottom: 0.25rem;
+}
+
 .resume_container {
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
-  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Card wrapper for Education / Work */
+.resume_card {
+  background: var(--container-color);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--accent-muted);
+  border-left: 4px solid var(--accent);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.resume_card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-left-color: var(--accent-light);
 }
 
 .resume_heading {
   font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
-  margin-left: var(--mb-0-25);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.resume_heading_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
 .resume_icon {
-  font-size: 1.5rem;
-  margin-right: var(--mb-0-25);
+  display: none;
 }
 
 .resume_sub_container {
   display: flex;
-  margin-left: var(--mb-2);
+  gap: 1rem;
+  margin-left: 0;
+  padding-bottom: 1.25rem;
 }
 
+.resume_sub_container:last-of-type {
+  padding-bottom: 0;
+}
+
+/* Timeline dot */
 .resume_rounded {
   display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-color: var(--title-color);
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
   border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+  border: 3px solid var(--accent-soft);
+  box-sizing: content-box;
 }
 
 .resume_line {
   display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--title-color);
-  transform: translate(6px, -7px);
+  width: 2px;
+  min-height: calc(100% - 6px);
+  background: linear-gradient(180deg, var(--accent-muted) 0%, var(--accent-muted) 100%);
+  transform: translate(5px, 4px);
+  border-radius: 1px;
 }
 
+/* Item content */
+.resume_item_content,
 .education_container,
 .work_container {
-  margin-left: var(--mb-1);
+  margin-left: 0;
+  padding-bottom: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .education_title,
 .work_title {
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: 0.25rem;
+  line-height: 1.35;
 }
 
 .education_subtitle,
 .work_subtitle {
-  display: inline-block;
+  display: block;
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
 }
 
 .calendar_icon {
   font-size: var(--smaller-font-size);
-  margin-bottom: var(--mb-0-5);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.calendar_icon i {
+  color: var(--accent);
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 768px) {
   .resume_container {
-    grid-template-columns: max-content;
-    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume_card {
+    padding: 1.75rem 1.5rem;
   }
 }
 
-@media screen and (max-width: 290px) {
-  .resume_sub_container {
-    margin-left: var(--mb-1);
+@media screen and (max-width: 480px) {
+  .resume_card {
+    padding: 1.5rem 1.25rem;
   }
-  .education_title,
-  .education_subtitle {
-    inline-size: 160px;
-    overflow-wrap: break-word;
+
+  .resume_sub_container {
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .resume_rounded {
+    width: 12px;
+    height: 12px;
+    margin-top: 0.35rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .resume_heading_icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
   }
 }
