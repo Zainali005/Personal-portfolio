@@ -10,7 +10,7 @@ import CoretailSolutions from "../../assets/coretail.png";
 import nova from "../../assets/nova.png";
 import loadaid from "../../assets/loadaid.png";
 import syncortic from "../../assets/syncortic.png";
-import cryptoWhat from "../../assets/cryptoWhat.png";
+import cryptoWhat from "../../assets/cryptowhat.png";
 import farenio from "../../assets/farenio.png";
 import "./Projects.css";
 
